@@ -38,12 +38,11 @@ public class SampleAspect implements ApplicationContextAware {
 
     }
 
-    /*  @Before("methodPointCut()")
-      public void before() {
+    @Before("methodPointCut()")
+    public void before() {
+        logger.info("before execute.......");
+    }
 
-          logger.info("before execute.......");
-      }
-  */
     @AfterThrowing(value = "methodPointCut()", throwing = "ex")
     public void exceptionMethod(Exception ex) {
         logger.info("execute exception ...");
