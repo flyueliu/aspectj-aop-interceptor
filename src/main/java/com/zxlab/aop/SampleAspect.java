@@ -24,6 +24,7 @@ import java.util.Map;
  */
 @Aspect
 @Component
+@EnableAspectJAutoProxy
 public class SampleAspect implements ApplicationContextAware {
 
 

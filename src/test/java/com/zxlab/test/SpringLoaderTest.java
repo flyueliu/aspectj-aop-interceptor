@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.sql.DataSource;
+
 /**
  * @author Liu Yuefei
  * @created 2018-09-10 9:13
@@ -18,6 +20,9 @@ public class SpringLoaderTest {
     @Autowired
     private SampleService sampleService;
 
+    @Autowired
+    private DataSource dataSource;
+
     @Test
     public void testContext() {
         System.out.println("start");
@@ -26,5 +31,10 @@ public class SpringLoaderTest {
     @Test
     public void testService() {
         sampleService.getName("userName");
+    }
+
+    @Test
+    public void testDataSource() {
+        System.out.println(dataSource);
     }
 }
