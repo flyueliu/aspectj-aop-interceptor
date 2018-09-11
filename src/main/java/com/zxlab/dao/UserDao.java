@@ -1,7 +1,7 @@
 package com.zxlab.dao;
 
 import com.zxlab.entity.User;
-import org.springframework.data.repository.CrudRepository;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,5 +9,8 @@ import org.springframework.stereotype.Repository;
  * @Description:
  * @Date: Created in 16:16 2018/2/9
  */
-public interface UserDao extends CrudRepository<User, Long> {
+@Repository
+public interface UserDao {
+
+    User getById(Integer id);
 }

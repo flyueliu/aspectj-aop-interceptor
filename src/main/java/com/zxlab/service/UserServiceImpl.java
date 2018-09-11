@@ -5,7 +5,6 @@ import com.zxlab.entity.User;
 import com.zxlab.service.base.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Author: Liu Yuefei
@@ -20,9 +19,8 @@ public class UserServiceImpl extends BaseService implements UserService {
     private UserDao userDao;
 
     @Override
-    @Transactional
     public User getById(Long id) {
         logger.info("get UserById: " + id);
-        return userDao.findOne(id);
+        return null;
     }
 }

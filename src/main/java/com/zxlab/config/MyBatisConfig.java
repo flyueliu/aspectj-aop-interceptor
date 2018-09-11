@@ -1,5 +1,6 @@
 package com.zxlab.config;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -7,10 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @created 2018-09-10 17:53
  */
 @Configuration
-public class DruidDataResource {
+@MapperScan(basePackages = "com.zxlab.dao", sqlSessionFactoryRef = "sqlSessionFactory")
+public class MyBatisConfig {
 
-    /*@Bean(initMethod = "init", destroyMethod = "close")
-    public DataSource druidDataSource() {
-
-    }*/
 }

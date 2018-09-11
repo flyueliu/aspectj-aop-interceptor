@@ -16,7 +16,7 @@ import javax.sql.DataSource;
  * @created 2018-09-10 9:13
  */
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations = {"classpath:applicationContext.xml"})
+@ContextConfiguration(locations = {"classpath*:applicationContext*.xml"})
 public class SpringLoaderTest {
 
     @Autowired
@@ -45,9 +45,7 @@ public class SpringLoaderTest {
 
     @Test
     public void testRepository() {
-        User user = new User();
-        user.setAge(18);
-        user.setName("lyyf");
-        userDao.save(user);
+        User user = userDao.getById(1);
+        System.out.println(user);
     }
 }

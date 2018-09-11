@@ -1,18 +1,12 @@
 package com.zxlab.entity;
 
-import javax.persistence.*;
-
 /**
  * @Author: Liu Yuefei
  * @Date: Created in 2018/9/11 10:15
  * @Description:
  */
-@Entity
-@Table(name = "tbl_user")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
