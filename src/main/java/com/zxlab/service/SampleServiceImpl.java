@@ -1,5 +1,6 @@
 package com.zxlab.service;
 
+import com.zxlab.service.base.BaseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -9,9 +10,8 @@ import org.springframework.stereotype.Service;
  * @created 2018-09-10 8:54
  */
 @Service
-public class SampleServiceImpl implements SampleService {
+public class SampleServiceImpl extends BaseService implements SampleService {
 
-    private Logger logger = LoggerFactory.getLogger(SampleServiceImpl.class);
 
     @Override
     public String getName(String name) {

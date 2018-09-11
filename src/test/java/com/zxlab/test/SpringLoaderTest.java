@@ -1,5 +1,7 @@
 package com.zxlab.test;
 
+import com.zxlab.dao.UserDao;
+import com.zxlab.entity.User;
 import com.zxlab.service.SampleService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,5 +38,16 @@ public class SpringLoaderTest {
     @Test
     public void testDataSource() {
         System.out.println(dataSource);
+    }
+
+    @Autowired
+    private UserDao userDao;
+
+    @Test
+    public void testRepository() {
+        User user = new User();
+        user.setAge(18);
+        user.setName("lyyf");
+        userDao.save(user);
     }
 }

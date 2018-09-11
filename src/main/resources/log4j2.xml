@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<configuration status="warn" monitorInterval="30">
+<configuration status="warn" monitorInterval="1">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <ThresholdFilter level="${log.console.level}" onMatch="ACCEPT" onMismatch="DENY"/>
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS}:%4p %t (%F:%L) - %m%n"/>
+            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss.SSS} %-5level %l - %msg%xEx%n"/>
         </Console>
     </Appenders>
 
