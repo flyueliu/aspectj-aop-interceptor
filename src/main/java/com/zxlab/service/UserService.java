@@ -1,6 +1,7 @@
 package com.zxlab.service;
 
 import com.zxlab.entity.User;
+import com.zxlab.vo.out.JsonResult;
 
 /**
  * @Author: Liu Yuefei
@@ -10,4 +11,6 @@ import com.zxlab.entity.User;
 public interface UserService {
 
     User getById(Long id);
+
+    JsonResult<User> login(String name, String password);
 }

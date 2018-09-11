@@ -13,6 +13,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -23,7 +24,7 @@ import java.util.Map;
  * @created 2018-09-10 8:56
  */
 @Aspect
-@Component
+@Controller
 @EnableAspectJAutoProxy
 public class SampleAspect implements ApplicationContextAware {
 
@@ -34,14 +35,13 @@ public class SampleAspect implements ApplicationContextAware {
     /**
      * 切入点：SampleService继承树中所有方法。
      */
-    @Pointcut("execution(* com.zxlab..*service..*(..))")
+    @Pointcut("execution(* com.zxlab..*controller..*(..))")
     public void methodPointCut() {
 
     }
 
     @Before("methodPointCut()")
-    public void before() {
-        logger.info("before execute.......");
+    public void before(JoinPoint joinPoint) {
     }
 
     @AfterThrowing(value = "methodPointCut()", throwing = "ex")
@@ -52,7 +52,6 @@ public class SampleAspect implements ApplicationContextAware {
 
     @AfterReturning("methodPointCut()")
     public void finallyExecute() {
-        logger.info("finallyExecute finish....");
     }
 
     @Around("methodPointCut()")
@@ -94,7 +93,6 @@ public class SampleAspect implements ApplicationContextAware {
 
     @After("methodPointCut()")
     public void afterExecute(JoinPoint joinPoint) throws Throwable {
-        logger.info("pointcut after:" + joinPoint.getStaticPart());
     }
 
     @Override

@@ -15,23 +15,28 @@
         <Logger name="com.zxlab" level="${log.project.level}" additivity="false">
             <AppenderRef ref="Console"/>
         </Logger>
-
-     <!--   <logger name="org.springframework.scheduling" level="INFO"/>
+        <Logger name="com.zxlab.dao" level="INFO" additivity="false"/>
+        <Logger name="org.springframework" level="INFO"/>
+        <Logger name="org.apache" level="INFO"/>
         <logger name="druid.sql.Statement" level="debug"/>
-        <Logger name="org.apache.catalina.startup.DigesterFactory" level="error"/>
-        <Logger name="org.apache.catalina.util.LifecycleBase" level="error"/>
-        <Logger name="org.apache.coyote.http11.Http11NioProtocol" level="warn"/>
-        <logger name="org.apache.sshd.common.util.SecurityUtils" level="warn"/>
-        <Logger name="org.apache.tomcat.util.net.NioSelectorPool" level="warn"/>
-        <Logger name="org.crsh.plugin" level="warn"/>
-        <logger name="org.crsh.ssh" level="warn"/>
-        <Logger name="org.apache.ibatis.logging.jdbc" level="warn" additivity="false">
-            <AppenderRef ref="Console"/>
-        </Logger>
-        <Logger name="org.eclipse.jetty.util.component.AbstractLifeCycle" level="error"/>
-        <Logger name="org.hibernate.validator.internal.util.Version" level="warn"/>
-        <logger name="org.springframework.boot.actuate.autoconfigure.CrshAutoConfiguration" level="warn"/>
-        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="warn"/>
-        <logger name="org.thymeleaf" level="warn"/>-->
+        <!--  <logger name="org.springframework.scheduling" level="INFO"/>
+         <Logger name="org.apache.ibatis" level="INFO"/>
+
+          <Logger name="org.apache.catalina.startup.DigesterFactory" level="error"/>
+          <Logger name="org.apache.catalina.util.LifecycleBase" level="error"/>
+          <Logger name="org.apache.coyote.http11.Http11NioProtocol" level="warn"/>
+          <logger name="org.apache.sshd.common.util.SecurityUtils" level="warn"/>
+          <Logger name="org.apache.tomcat.util.net.NioSelectorPool" level="warn"/>
+          <Logger name="org.crsh.plugin" level="warn"/>
+          <logger name="org.crsh.ssh" level="warn"/>
+          <Logger name="org.apache.ibatis.logging.jdbc" level="WARN" additivity="false">
+              <AppenderRef ref="Console"/>
+          </Logger>
+          <Logger name="org.eclipse.jetty.util.component.AbstractLifeCycle" level="error"/>
+          <Logger name="org.hibernate.validator.internal.util.Version" level="warn"/>
+          <logger name="org.springframework.boot.actuate.autoconfigure.CrshAutoConfiguration" level="warn"/>
+          <logger name="org.springframework.boot.actuate.endpoint.jmx" level="warn"/>
+          <logger name="org.thymeleaf" level="warn"/>
+      </Loggers>-->
     </Loggers>
 </configuration>

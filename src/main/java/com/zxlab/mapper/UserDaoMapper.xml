@@ -4,4 +4,5 @@
     <select id="getById" resultType="com.zxlab.entity.User">
         select * from tbl_user where id=#{id}
     </select>
+
 </mapper>
